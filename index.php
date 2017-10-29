@@ -1,14 +1,17 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
-switch ($method) {
+$req_method = $_SERVER['REQUEST_METHOD'];
+switch ($req_method) {
     case 'HEAD':
         if (file_exists($_GET['file']))
             echo filesize($_GET['file']);
         break;
     case 'GET':
-        if (file_exists($_GET['file']))
-            echo file_get_contents($_GET['file']);
-        break;
+        $api_method=$_GET['method'];
+        switch ($api_method){
+            case 'CheckLoginPass':
+                echo $_GET['Login'].' '.$_GET['Pass'];
+                break;
+        }
     case 'POST':
         file_put_contents($_GET['file'],file_get_contents('php://input'));
         break;
