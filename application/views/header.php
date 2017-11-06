@@ -10,5 +10,15 @@
                 <?php endforeach;?>
             <?php endif; ?>
         <?php endif; ?>
+        <?php if (isset($script)):?>
+            <?php if ( is_array($script)):?>
+                <?php foreach ($script as $item):?>
+
+                    <?php echo script_tag('js/'.$item);?>
+
+                <?php endforeach;?>
+            <?php endif; ?>
+        <?php endif; ?>
     </head>
     <body>
+        <div class="page">
