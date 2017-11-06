@@ -1,7 +1,14 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>CodeIgniter Tutorial</title>
+        <?php if (isset($css)):?>
+            <?php if ( is_array($css)):?>
+                <?php foreach ($css as $item):?>
+
+                    <?php echo link_tag('css/'.$item);?>
+
+                <?php endforeach;?>
+            <?php endif; ?>
+        <?php endif; ?>
     </head>
     <body>
-
-        <h1><?php echo $title ?></h1>

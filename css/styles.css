@@ -1,0 +1,41 @@
+.default {
+  font-family:'Arial Обычный', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  color:#333333;
+  text-align:center;
+  line-height:normal;
+}
+.title{
+  position: relative;
+  left:0px;
+  top:0px;
+  width:700px;
+  height:80px;
+  background-color:rgba(255, 255, 255, 1);
+  border-width:1px;
+  border-style:solid;
+}
+.logo_100_60{
+  position: relative;;
+  left:20px;
+  top:10px;
+  width:100px;
+  height:60px;
+}
+.exit_button {
+  position: absolute;
+  right:20px;
+  top:20px;
+  width:122px;
+  height:40px;
+  font-family:'Aharoni Полужирный', 'Aharoni';
+  font-weight:700;
+  font-style:normal;
+  font-size:15px;
+  text-align:center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius:10px;
+}
