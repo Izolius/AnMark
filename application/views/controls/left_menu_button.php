@@ -1,3 +1,14 @@
-<div <?php if (isset($id)) echo 'id="'.$id.'"'; ?> class="bordered button left_menu_button">
-    <p><span><?php if (isset($text)) echo $text?></span></p>
-</div>
+    <div <?php if (isset($id)) echo 'id="'.$id.'"'; ?> class="bordered button left_menu_button">
+<?php 
+$_text='';
+$_site='';
+$_class='link';
+if (isset($text))
+    $_text=$text;
+if (isset($site))
+    $_site=$site;
+if (isset($class))
+    $_class=$class;
+?>
+        <p><?php echo anchor(site_url($_site), $_text, 'class="'.$_class.'"');?></p>
+    </div>

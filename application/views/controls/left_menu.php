@@ -1,11 +1,5 @@
 <div id="left_menu" class="left_menu">
-    <div class="bordered button left_menu_button">
-        <p><?php echo anchor(site_url("main"), 'Главная', 'class="link"')?></p>
-    </div>  
-    <div class="bordered button left_menu_button">
-        <p><?php echo anchor(site_url("friends"), 'Друзья', 'class="link"')?></p>
-    </div> 
-    <div class="bordered button left_menu_button">
-        <p><?php echo anchor(site_url("messages"), 'Сообщения', 'class="link"')?></p>
-    </div>   
+<?php $this->view('controls/left_menu_button',array('site'=>'main', 'text'=>'Главная'));?>
+<?php $this->view('controls/left_menu_button',array('site'=>'friends', 'text'=>'Друзья'));?>
+<?php $this->view('controls/left_menu_button',array('site'=>'messages', 'text'=>'Сообщения'));?>      
 </div>

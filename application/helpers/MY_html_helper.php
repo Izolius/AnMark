@@ -6,5 +6,4 @@ function script_tag($src){
     }
     return '';
 }
-
 ?>

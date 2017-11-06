@@ -8,14 +8,16 @@
   line-height:normal;
 }
 .page{
+  position: relative;
   width: 700px;
+  height: auto;
   margin: auto;
 }
 .title{
-  position: relative;
+  position: absolute;
   left:0px;
   top:0px;
-  width:inherit;
+  right:0px;
   height:80px;
   background-color:rgba(255, 255, 255, 1);
   border-width:1px;
@@ -47,21 +49,25 @@
   top:20px;
   width:122px;
   height:40px;
-  
-  
 }
 .left_menu{
-  position: relative;
+  position: absolute;
   left:0px;
-  top:80px;
+  top:90px;
   width: 180px;
 }
 .left_menu_button{
-  /* position: absolute;
-  left:0px;
-  right:0px; */
+  position: relative;
   width:inherit;
   height:40px;
+  margin:1px;
+}
+.page_placer{
+  position: absolute;
+  top: 90px;
+  left:190px;
+  right:0px;
+  height: inherit;
 }
 a{
   font-family:'Aharoni Полужирный', 'Aharoni';
