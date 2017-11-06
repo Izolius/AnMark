@@ -10,9 +10,9 @@ class Friends extends ANM_default_page {
 	public function index()
 	{
 		$header['css']=array("styles.css", "friends.css");
-		$header['logo']="logo_100_60";
+		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
-		$this->load->view('controls/Title');
+		$this->load->view('controls/Title',$title);
 		$this->load->view('controls/left_menu');
 		$query=$this->db->get('Users');
 		$innerdata['friends']=$query->result();
