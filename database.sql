@@ -16,23 +16,38 @@
 CREATE DATABASE IF NOT EXISTS `Anmark.ru` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `Anmark.ru`;
 
+-- Дамп структуры для таблица Anmark.ru.Friends
+CREATE TABLE IF NOT EXISTS `Friends` (
+  `user_id` int(11) NOT NULL,
+  `friend_id` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`,`friend_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы Anmark.ru.Friends: ~0 rows (приблизительно)
+DELETE FROM `Friends`;
+/*!40000 ALTER TABLE `Friends` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Friends` ENABLE KEYS */;
+
 -- Дамп структуры для таблица Anmark.ru.Users
 CREATE TABLE IF NOT EXISTS `Users` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
   `photo_50` varchar(50) DEFAULT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Anmark.ru.Users: ~2 rows (приблизительно)
+-- Дамп данных таблицы Anmark.ru.Users: ~5 rows (приблизительно)
 DELETE FROM `Users`;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
 INSERT INTO `Users` (`id`, `first_name`, `last_name`, `photo_50`, `email`, `password`) VALUES
-	(0, 'Anton', 'Andreev', '0_50.jpg', 'andreev-09@yandex.ru', 'qwerty'),
-	(1, 'Misha', 'Karachyov', '1_50.jpg', 'somemail@yandex.ru', 'qwerty');
+	(1, 'Anton', 'Andreev', '0_50.jpg', 'andreev-09@yandex.ru', 'qwerty'),
+	(2, 'Misha', 'Karachyov', '1_50.jpg', 'somemail@yandex.ru', 'qwerty'),
+	(3, 'asdfasdf', 'sdfasdfasdf', NULL, 'andreev-10@yandex.ru', 'qwerty'),
+	(4, 'qwerqwer', 'qwerqwer', NULL, 'somemail2@yandex.ru', 'qwerty'),
+	(5, 'Masha', 'Lubavina', NULL, 'masha.lubavina@yandex.ru', 'qwerty');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
