@@ -1,17 +1,16 @@
 <?php
 include ("ANM_default_page.php");
 
-class Welcome extends ANM_default_page {
+class Welcome extends CI_Controller {
 	public function __construct()
     {
             parent::__construct();
-			$this->load->helper('form');
-			$this->load->library('form_validation');
+			$this->load->helper(array('form','url','html'));
+			$this->load->library(array('form_validation','session'));
 			$this->load->database();
     }
 	public function index()
 	{
-		// $this->session->unset_userdata('user_id');
 		if ($this->form_validation->run('signin') == FALSE)
 		{
 			$header['css']=array("styles.css", "welcome.css");
@@ -30,18 +29,11 @@ class Welcome extends ANM_default_page {
 		}
 	}
 
-	// public function email_check($str)
-	// {
-	// 	$this->load->database();
-	// 	$this->db->select('email');
-	// 	$query = $this->db->get('Users');
-	// 	if (in_array(array('email'=>$str),$query->result_array(),true)){
-	// 		return true;
-	// 	}else{
-	// 		$this->form_validation->set_message('email_check', 'Пользователя с данной почтой и паролем не существует');
-	// 		return false;
-	// 	}
-	// }
+	public function logout()
+	{
+		$this->session->unset_userdata('user_id');
+		header('Location: '.site_url('welcome'),true,301);
+	}
 
 	public function password_check($str)
 	{

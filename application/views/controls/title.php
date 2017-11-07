@@ -6,7 +6,7 @@
     <!-- Exit (Rectangle) -->
     <div class="bordered button exit_button">
       <p><?php 
-        echo anchor(site_url('welcome'),'Выход');
+        echo anchor(site_url('welcome/logout'),'Выход');
       ?></p>
     </div>
 </div>

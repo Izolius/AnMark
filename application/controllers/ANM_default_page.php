@@ -9,7 +9,7 @@ class ANM_default_page extends CI_Controller {
 
     public function _remap($method)
     {
-        if (null === $this->session->userdata('user_id') && $method!=='index'){
+        if (null === $this->session->userdata('user_id')){
             header('Location: '.site_url('welcome'),true,301);
         }
         else{
