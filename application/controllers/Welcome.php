@@ -30,18 +30,18 @@ class Welcome extends ANM_default_page {
 		}
 	}
 
-	public function email_check($str)
-	{
-		$this->load->database();
-		$this->db->select('email');
-		$query = $this->db->get('Users');
-		if (in_array(array('email'=>$str),$query->result_array(),true)){
-			return true;
-		}else{
-			$this->form_validation->set_message('email_check', 'Пользователя с данной почтой и паролем не существует');
-			return false;
-		}
-	}
+	// public function email_check($str)
+	// {
+	// 	$this->load->database();
+	// 	$this->db->select('email');
+	// 	$query = $this->db->get('Users');
+	// 	if (in_array(array('email'=>$str),$query->result_array(),true)){
+	// 		return true;
+	// 	}else{
+	// 		$this->form_validation->set_message('email_check', 'Пользователя с данной почтой и паролем не существует');
+	// 		return false;
+	// 	}
+	// }
 
 	public function password_check($str)
 	{
@@ -51,7 +51,7 @@ class Welcome extends ANM_default_page {
 		if (in_array(array('email'=>set_value('email'), 'password'=>$str),$query->result_array(),true)){
 			return true;
 		}else{
-			$this->form_validation->set_message('email_check', 'Пользователя с данной почтой и паролем не существует');
+			$this->form_validation->set_message('password_check', 'Пользователя с данной почтой и паролем не существует');
 			return false;
 		}
 	}

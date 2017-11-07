@@ -23,7 +23,7 @@ class Registration extends ANM_default_page {
                         'password' => set_value('password'),
                         'email'=> set_value('email')
                      );
-                
+                     $this->db->insert('Users',$data);
                      header('Location: '.site_url('welcome'),true,301);
                 }
         }

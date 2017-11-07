@@ -31,7 +31,7 @@ $config = array(
                 array(
                         'field' => 'email',
                         'label' => 'Email',
-                        'rules' => 'required|valid_email|callback_email_check|max_length[100]'
+                        'rules' => 'required|valid_email|max_length[100]'
                 ),
                 array(
                         'field' => 'password',

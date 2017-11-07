@@ -1,4 +1,4 @@
-<div id="title" class="title">
+<div id="title" class="bordered title">
     <!-- Logo (Image) -->
     <div class=<?php echo $logo ?>>
       <?php echo img('rsc/images/'.$logo.'.png'); ?>
