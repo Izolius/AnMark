@@ -24,11 +24,7 @@ class Registration extends ANM_default_page {
                         'email'=> set_value('email')
                      );
                 
-                    $this->db->insert('Users', $data);
-                    $header['css']=array("styles.css");
-                    $this->load->view('header', $header);
-                    $this->load->view('signedup');
-                    $this->load->view('footer');
+                     header('Location: '.site_url('welcome'),true,301);
                 }
         }
 
