@@ -13,10 +13,12 @@
 
 
 -- Дамп структуры базы данных Anmark.ru
+DROP DATABASE IF EXISTS `Anmark.ru`;
 CREATE DATABASE IF NOT EXISTS `Anmark.ru` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `Anmark.ru`;
 
 -- Дамп структуры для таблица Anmark.ru.Attachments
+DROP TABLE IF EXISTS `Attachments`;
 CREATE TABLE IF NOT EXISTS `Attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `path` varchar(10) DEFAULT NULL,
@@ -30,6 +32,7 @@ DELETE FROM `Attachments`;
 /*!40000 ALTER TABLE `Attachments` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Friends
+DROP TABLE IF EXISTS `Friends`;
 CREATE TABLE IF NOT EXISTS `Friends` (
   `user_id` int(11) NOT NULL,
   `friend_id` int(11) NOT NULL,
@@ -48,6 +51,7 @@ INSERT INTO `Friends` (`user_id`, `friend_id`) VALUES
 /*!40000 ALTER TABLE `Friends` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Posts
+DROP TABLE IF EXISTS `Posts`;
 CREATE TABLE IF NOT EXISTS `Posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -67,6 +71,7 @@ INSERT INTO `Posts` (`id`, `user_id`, `text`, `created`) VALUES
 /*!40000 ALTER TABLE `Posts` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Post_Attachments
+DROP TABLE IF EXISTS `Post_Attachments`;
 CREATE TABLE IF NOT EXISTS `Post_Attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
@@ -81,6 +86,7 @@ DELETE FROM `Post_Attachments`;
 /*!40000 ALTER TABLE `Post_Attachments` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Users
+DROP TABLE IF EXISTS `Users`;
 CREATE TABLE IF NOT EXISTS `Users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(20) DEFAULT NULL,
