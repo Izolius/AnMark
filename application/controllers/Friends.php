@@ -14,9 +14,12 @@ class Friends extends ANM_default_page {
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
 		$this->load->view('controls/left_menu');
-		$query=$this->db->query('select * from Friends inner join Users on Friends.friend_id=Users.id where user_id=?',$this->session->userdata('user_id'));
-		$innerdata['friends']=$query->result();
-		$view['view']='controls/friend_list';
+		$user_id=currentUser()->id;
+		$query=$this->db->query('select * from Friends inner join Users on Friends.friend_id=Users.id where user_id=?',$user_id);
+		$innerdata['elements']=$query->result();
+		$innerdata['class']='friend_list';
+		$innerdata['view']='controls/friend';
+		$view['view']='controls/feed';
 		$view['data']=$innerdata;
 		$this->load->view('controls/page_placer', $view);
 		$this->load->view('footer');

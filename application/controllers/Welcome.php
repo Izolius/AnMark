@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 	public function __construct()
     {
             parent::__construct();
-			$this->load->helper(array('form','url','html'));
+			$this->load->helper(array('form','url','html','user'));
 			$this->load->library(array('form_validation','session'));
 			$this->load->database();
     }
@@ -21,17 +21,17 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{
-			$this->db->select('id, email');
+			//$this->db->select('id, email');
 			$this->db->where('email',set_value('email'));
 			$query=$this->db->get('Users');
-			$this->session->set_userdata('user_id',$query->row()->id);
+			$this->session->set_userdata('user',$query->row());
 			header('Location: '.site_url('main'),true,301);
 		}
 	}
 
 	public function logout()
 	{
-		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('user');
 		header('Location: '.site_url('welcome'),true,301);
 	}
 

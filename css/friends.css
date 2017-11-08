@@ -2,9 +2,7 @@
 
 }
 .friend{
-    position: relative;
     height: 70px;
-    margin: 1px;
 }
 .friend_name{
     position: absolute;

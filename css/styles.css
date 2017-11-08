@@ -1,11 +1,9 @@
 .default {
-  font-family:'Arial Обычный', 'Arial';
+  font-family:'Aharoni Полужирный', 'Aharoni';
   font-weight:400;
   font-style:normal;
-  font-size:13px;
-  color:#333333;
+  font-size:15px;
   text-align:center;
-  line-height:normal;
 }
 .page{
   position: relative;
@@ -78,4 +76,12 @@ a{
 }
 form{
   margin: auto;
+}
+.feed_element{
+  position: relative;
+  margin: 1px;
+}
+.photo_50{
+  height: 50px;
+  width: 50px;
 }
