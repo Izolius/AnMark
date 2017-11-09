@@ -1,4 +1,5 @@
 .registration_button{
+    font-family:'myFont', 'Segoe Script';
     position: relative;
     height: auto;
 }

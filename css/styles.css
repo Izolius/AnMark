@@ -1,5 +1,5 @@
 .default {
-  font-family:'Aharoni Полужирный', 'Aharoni';
+  font-family:'myFont', 'Segoe Script';
   font-weight:400;
   font-style:normal;
   font-size:15px;
@@ -17,15 +17,17 @@
   top:0px;
   right:0px;
   height:80px;
-  background-color:rgba(255, 255, 255, 1);
+  background-color:rgba(235, 235, 235, 1);
 }
 .button{
-  font-family:'Aharoni Полужирный', 'Aharoni';
+  font-family:'myFont', 'Segoe Script';
   font-weight:700;
   font-style:normal;
-  font-size:15px;
-  text-align:center;
+  font-size: 15px;
+  text-align: center;
   cursor: pointer;
+  background-color:rgba(235, 235, 235, 1);
+  text-shadow: black;
 }
 .bordered{
   border-width: 1px;
@@ -66,7 +68,7 @@
   height: inherit;
 }
 a{
-  font-family:'Aharoni Полужирный', 'Aharoni';
+  font-family:'myFont', 'Segoe Script';
   font-weight:700;
   font-style:normal;
   color: black;
@@ -84,4 +86,8 @@ form{
 .photo_50{
   height: 50px;
   width: 50px;
+}
+@font-face {
+  font-family: myFont;
+  src:url('../rsc/fonts/segoesc.ttf') format('TrueType'), 
 }

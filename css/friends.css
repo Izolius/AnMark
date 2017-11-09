@@ -1,4 +1,5 @@
 .friend_list{
+    font-family:'myFont', 'Segoe Script';
 
 }
 .friend{
@@ -16,3 +17,7 @@
     width: 50px;
     height: 50px;
 }
+@font-face {
+    font-family: myFont;
+    src:url('../rsc/fonts/segoesc.ttf') format('TrueType'), 
+  }

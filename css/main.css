@@ -6,6 +6,7 @@
     height: 200px;
 }
 .user_name{
+    font-family:'myFont', 'Segoe Script';
     position: absolute;
     left: 220px;
 }
@@ -20,6 +21,7 @@
     right: 0px;
 }
 .post_author_name_rel{
+    font-family:'myFont', 'Segoe Script';
     position: relative;
     left: 70px;
     height: 20px;
@@ -32,6 +34,7 @@
     top:-30px;
 }
 .post_text_rel{
+    font-family:'myFont', 'Segoe Script';
     position: relative;
     left:10px;
     right:20px;
@@ -39,6 +42,7 @@
     word-break: break-all;
 }
 .post_author_name{
+    font-family:'myFont', 'Segoe Script';
     position: absolute;
     left: 70px;
     top:10px;
@@ -49,6 +53,7 @@
     top:10px;
 }
 .post_text{
+    font-family:'myFont', 'Segoe Script';
     position: absolute;
     top:70px;
     left:10px;
@@ -56,3 +61,7 @@
     resize: none;
     word-break: break-all;
 }
+@font-face {
+    font-family: myFont;
+    src:url('../rsc/fonts/segoesc.ttf') format('TrueType'), 
+  }
