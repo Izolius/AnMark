@@ -1,4 +1,4 @@
-    <div <?php if (isset($id)) echo 'id="'.$id.'"'; ?> class="bordered button left_menu_button">
+    <div <?php if (isset($id)) echo 'id="'.$id.'"'; ?> class="button left_menu_button">
 <?php 
 $_text='';
 $_site='';

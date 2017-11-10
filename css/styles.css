@@ -12,12 +12,13 @@
   margin: auto;
 }
 .title{
+  border-radius: 8px;
   position: absolute;
   left:0px;
   top:0px;
   right:0px;
   height:80px;
-  background-color:rgba(235, 235, 235, 1);
+  background-color:rgba(215,215,215,1);
 }
 .button{
   border-radius: 8px;
@@ -27,18 +28,21 @@
   font-size: 15px;
   text-align: center;
   cursor: pointer;
-  background-color:rgba(235, 235, 235, 1);
+  background-color:rgba(215,215,215,1);
   text-shadow: black;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  display: inline-block;
+  margin: 4px 2px;
 }
 .button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-family:'myFont Полужирный', 'Segoe Script';
+  box-shadow: 10px 12px 16px 0 rgba(0,0,0,0.24), 10px 17px 50px 0 rgba(0,0,0,0.19);
 }
 .bordered{
   border-width: 1px;
   border-style: solid;
-  border-radius:5px;
+  border-radius:8px;
 }
 .logo_100_60{
   position: relative;
