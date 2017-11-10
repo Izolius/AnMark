@@ -13,13 +13,14 @@
     left: 220px;
 }
 .post{
+    top: auto;
     position: relative;
     height: auto;
 }
 .news_feed{
     position: relative;
     left: 0px;
-    top:220px;
+    top: 220px;
     right: 0px;
 }
 .post_author_name_rel{
