@@ -1,7 +1,7 @@
 .user_photo_200{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    /*left: 10px;*/
+    /*top: 10px;*/
     width: 200px;
     height: 200px;
 }
@@ -25,7 +25,7 @@
     position: relative;
     left: 70px;
     height: 20px;
-    top:10px;
+    top: 10px;
     text-align: left;
 }
 .author_photo_50_rel{
@@ -45,12 +45,12 @@
     font-family:'myFont', 'Segoe Script';
     position: absolute;
     left: 70px;
-    top:10px;
+    /*top:10px;*/
 }
 .author_photo_50{
     position: absolute;
     left: 10px;
-    top:10px;
+    /*top:10px;*/
 }
 .post_text{
     font-family:'myFont', 'Segoe Script';
