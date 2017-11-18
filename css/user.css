@@ -1,10 +1,5 @@
-.user_photo_200{
+.user_photo{
     position: absolute;
-    /*left: 10px;*/
-    /*top: 10px;*/
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;/*не обрубает*/
 }
 .user_name{
     font-family:'myFont', 'Segoe Script';
@@ -31,10 +26,10 @@
     top: 10px;
     text-align: left;
 }
-.author_photo_50_rel{
+.author_photo_rel{
     position: relative;
     left: 10px;
-    top:-30px;
+    top:-20px;
 }
 .post_text_rel{
     font-family:'myFont', 'Segoe Script';

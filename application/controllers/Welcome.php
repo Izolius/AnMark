@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 			$this->db->where('email',set_value('email'));
 			$query=$this->db->get('Users');
 			$this->session->set_userdata('user',$query->row());
-			header('Location: '.site_url('main'),true,301);
+			header('Location: '.site_url('user/'.$query->row()->id),true,301);
 		}
 	}
 

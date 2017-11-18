@@ -10,12 +10,10 @@
     left: 70px;
     text-align:center;
 }
-.friend_photo_50{
+.friend_photo{
     position:absolute;
     left: 10px;
     top: 10px;
-    width: 50px;
-    height: 50px;
 }
 @font-face {
     font-family: myFont;

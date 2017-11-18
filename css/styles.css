@@ -93,9 +93,16 @@ form{
   position: relative;
   margin: 1px;
 }
+.photo{
+  border-radius: 50%;
+}
 .photo_50{
   height: 50px;
   width: 50px;
+}
+.photo_200{
+  height: 200px;
+  width: 200px;
 }
 @font-face {
   font-family: myFont;
