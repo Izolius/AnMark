@@ -2,64 +2,19 @@
     position: absolute;
 }
 .user_name{
-    font-family:'myFont', 'Segoe Script';
     position: absolute;
     font-weight: 700;
     left: 220px;
 }
-.post{
-    top: auto;
-    position: relative;
-    height: auto;
-}
 .news_feed{
     position: relative;
     left: 0px;
-    top: 220px;
+    top: 250px;
     right: 0px;
 }
-.post_author_name_rel{
-    font-family:'myFont', 'Segoe Script';
-    position: relative;
-    left: 70px;
-    height: 20px;
-    top: 10px;
-    text-align: left;
-}
-.author_photo_rel{
-    position: relative;
-    left: 10px;
-    top:-20px;
-}
-.post_text_rel{
-    font-family:'myFont', 'Segoe Script';
-    position: relative;
-    left:10px;
-    right:20px;
-    resize: none;
-    word-break: break-all;
-}
-.post_author_name{
-    font-family:'myFont', 'Segoe Script';
+.add_friend_button{
     position: absolute;
-    left: 70px;
-    /*top:10px;*/
+    top: 210px;
+    left: 50px;
+    height: 30px;
 }
-.author_photo_50{
-    position: absolute;
-    left: 10px;
-    /*top:10px;*/
-}
-.post_text{
-    font-family:'myFont', 'Segoe Script';
-    position: absolute;
-    top:70px;
-    left:10px;
-    width: 200;
-    resize: none;
-    word-break: break-all;
-}
-@font-face {
-    font-family: myFont;
-    src:url('../rsc/fonts/segoesc.ttf') format('TrueType'), 
-  }

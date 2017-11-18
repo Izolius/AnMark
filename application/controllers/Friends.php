@@ -6,15 +6,27 @@ class Friends extends ANM_default_page {
     {
             parent::__construct();
 			$this->load->database();
+	}
+
+	public function _remap($method)
+    {
+		if (null === currentUser()){
+            header('Location: '.site_url('welcome'),true,301);
+        }
+        else{
+            $this->index($method);
+        }
     }
-	public function index()
+	
+	public function index($user_id)
 	{
+		if ($user_id=='index')
+			$user_id=currentUser()->id;
 		$header['css']=array("styles.css", "friends.css");
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
 		$this->load->view('controls/left_menu');
-		$user_id=currentUser()->id;
 		$query=$this->db->query('select * from Friends inner join Users on Friends.friend_id=Users.id where user_id=?',$user_id);
 		$innerdata['elements']=$query->result();
 		$innerdata['class']='friend_list';
