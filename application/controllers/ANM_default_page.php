@@ -7,13 +7,13 @@ class ANM_default_page extends CI_Controller {
             $this->load->library('session');
     }
 
-    public function _remap($method)
+    public function _remap($method, $params = array())
     {
         if (null === currentUser()){
             header('Location: '.site_url('welcome'),true,301);
         }
         else{
-            $this->$method();
+            $this->$method($params);
         }
     }
 }

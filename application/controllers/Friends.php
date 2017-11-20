@@ -8,13 +8,13 @@ class Friends extends ANM_default_page {
 			$this->load->database();
 	}
 
-	public function _remap($method)
+	public function _remap($method, $params = array())
     {
 		if (null === currentUser()){
             header('Location: '.site_url('welcome'),true,301);
         }
         else{
-            $this->index($method);
+            $this->index($method, $params);
         }
     }
 	

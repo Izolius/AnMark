@@ -7,13 +7,13 @@ class User extends ANM_default_page {
 			$this->load->database();
     }
     
-    public function _remap($method)
+    public function _remap($method, $params = array())
     {
 		if (null === currentUser()){
             header('Location: '.site_url('welcome'),true,301);
         }
         else{
-            $this->user($method);
+            $this->user($method,$params);
         }
     }
 
@@ -45,18 +45,6 @@ class User extends ANM_default_page {
 
 		$this->load->view('controls/page_placer', $view);
 		$this->load->view('footer');
-	}
-	
-	public function addFriend($id){
-		$query=$this->db->query(
-			'select friend_id from Users 
-			inner join Friends on Users.id=Friends.user_id
-			where user_id=? && friend_id=?',array(currentUser()->id, $id));
-		$canAdd=$id!=currentUser()->id && !(count($query->result())>0);
-		if ($canAdd)
-		{
-			$this->db->query('insert into Friends values(?,?)',array(currentUser()->id,$id));
-		}
 	}
 }
 ?>
