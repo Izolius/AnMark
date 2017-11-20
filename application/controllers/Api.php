@@ -20,7 +20,7 @@ class Api extends ANM_default_page {
         }
         header('Location: '.site_url('friends/'),true,301);
     }
-    
+
     public function RemoveFriend($id){
         $query=$this->db->query(
 			'select friend_id from Users 
