@@ -17,7 +17,8 @@ class Api extends ANM_default_page {
 		if ($canAdd)
 		{
 			$this->db->query('insert into Friends values(?,?)',array(currentUser()->id,$id));
-		}
+        }
+        header('Location: '.site_url('friends/'),true,301);
     }
     
     public function RemoveFriend($id){
@@ -30,6 +31,7 @@ class Api extends ANM_default_page {
         {
             $this->db->query('delete from Friends where user_id=? && friend_id=?',array(currentUser()->id,$id));
         }
+        header('Location: '.site_url('friends/'),true,301);
     }
 }
 ?>

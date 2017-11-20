@@ -13,9 +13,7 @@
 </div>
 <?php if($canAdd):?>
 <div class="button add_friend_button">
-        <p>
-            <a href="/index.php/api/addFriend/<?php $user->id?>" >Добавить в друзья</a>
-        </p>
+        <p><span><?php echo anchor('http://anmark.ru/index.php/api/addFriend/'.$user->id, 'Добавить в друзья'); ?></span></p>
 </div>
 <?php endif?>
 <div class="default user_name">

@@ -17,9 +17,6 @@
         ?>
     </div>
     <div class = "button exit_button">
-        <p> 
-         <a  href="/index.php/api/addFriend/<?$id?>"
-            >Убрать</a>
-        </p>
+        <p><span><?php echo anchor('http://anmark.ru/index.php/api/RemoveFriend/'.$id, 'Убрать');?></span></p>
     </div>
 </div>
