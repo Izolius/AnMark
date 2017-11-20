@@ -15,6 +15,10 @@
 <div class="button add_friend_button">
         <p><span><?php echo anchor('http://anmark.ru/index.php/api/addFriend/'.$user->id, 'Добавить в друзья'); ?></span></p>
 </div>
+    <?php else:?>
+<div class="button add_friend_button">
+        <p><span><?php echo anchor('http://anmark.ru/index.php/friends/'.$user->id, 'Посмотреть друзей'); ?></span></p>
+</div>
 <?php endif?>
 <div class="default user_name">
     <p><span><?php echo $user->first_name.' '.$user->last_name?></span></p>
