@@ -14,7 +14,7 @@
 <?php if($canAdd):?>
 <div class="button add_friend_button">
         <p>
-            <a href="" onclick = "Api/addFriend/"<?php $id?>= >Добавить в друзья</a>
+            <a href="/index.php/api/addFriend/<?php $user->id?>" >Добавить в друзья</a>
         </p>
 </div>
 <?php endif?>
