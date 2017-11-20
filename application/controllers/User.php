@@ -26,7 +26,8 @@ class User extends ANM_default_page {
 		$this->load->view('controls/left_menu');
 		
 		$query=$this->db->query('select Posts.id, first_name, last_name, photo_50, text, author_id from Posts
-		inner join Users on Posts.author_id = Users.id where user_id=?',$id);
+		inner join Users on Posts.author_id = Users.id where user_id=?
+		order by Posts.id DESC',$id);
 		$feeddata['elements']=$query->result();
 		$feeddata['class']='news_feed';
 		$feeddata['view']='controls/post';

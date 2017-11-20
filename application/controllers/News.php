@@ -20,6 +20,7 @@ class News extends ANM_default_page {
 		inner join Users on Posts.author_id = Users.id 
 		where user_id=? || user_id in 
 			(select friend_id from Friends inner join Users on Friends.friend_id=Users.id where user_id=?)
+			order by Posts.id DESC
 		',array($id, $id));
 		$innerdata['elements']=$query->result();
 		$innerdata['class']='123';

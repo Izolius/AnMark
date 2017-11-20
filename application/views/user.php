@@ -13,7 +13,9 @@
 </div>
 <?php if($canAdd):?>
 <div class="button add_friend_button">
-        <p>добавить в друзья</p>
+        <p>
+            <a href="" onclick = "Api/addFriend/"<?php $id?>= >Добавить в друзья</a>
+        </p>
 </div>
 <?php endif?>
 <div class="default user_name">

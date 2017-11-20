@@ -16,4 +16,9 @@
         
         ?>
     </div>
+    <div class = "button exit_button">
+        <p> 
+            <a href="" onclick= Api::RemoveFriend($id)= >Убрать</a>
+        </p>
+    </div>
 </div>
