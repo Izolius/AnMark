@@ -17,12 +17,14 @@
             Добавить в друзья
         </p>
 </div>
-    <?php if($user->id!=currentUser()->id && !$canAdd)?>
+    <?php else:?>
+    <?php if($user->id != currentUser()->id):?>
 <div class="button add_friend_button" onclick = "window.location.href='../friends/<?php $user->id?>'">
         <p>
             Посмотреть друзей
         </p>
 </div>
+<?php endif?>
 <?php endif?>
 <div class="default user_name">
     <p><span><?php echo $user->first_name.' '.$user->last_name?></span></p>
