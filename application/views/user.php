@@ -21,6 +21,14 @@
             Добавить в друзья
         </p>
 </div>
+    <?php else:?>
+    <?php if($user->id != currentUser()->id):?>
+<div class="button add_friend_button" onclick = "window.location.href='../friends/<?php $user->id?>'">
+        <p>
+            Посмотреть друзей
+        </p>
+</div>
+<?php endif?>
 <?php endif?>
 
 <?php if($canRemove):?>

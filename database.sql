@@ -11,12 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Дамп структуры базы данных Anmark.ru
-DROP DATABASE IF EXISTS `Anmark.ru`;
-CREATE DATABASE IF NOT EXISTS `Anmark.ru` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `Anmark.ru`;
-
 -- Дамп структуры для таблица Anmark.ru.Attachments
 DROP TABLE IF EXISTS `Attachments`;
 CREATE TABLE IF NOT EXISTS `Attachments` (
@@ -39,16 +33,32 @@ CREATE TABLE IF NOT EXISTS `Friends` (
   PRIMARY KEY (`user_id`,`friend_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Anmark.ru.Friends: ~5 rows (приблизительно)
+-- Дамп данных таблицы Anmark.ru.Friends: ~6 rows (приблизительно)
 DELETE FROM `Friends`;
 /*!40000 ALTER TABLE `Friends` DISABLE KEYS */;
 INSERT INTO `Friends` (`user_id`, `friend_id`) VALUES
 	(1, 1),
 	(1, 2),
+	(2, 1),
 	(2, 5),
 	(5, 1),
 	(5, 2);
 /*!40000 ALTER TABLE `Friends` ENABLE KEYS */;
+
+-- Дамп структуры для таблица Anmark.ru.Messages
+DROP TABLE IF EXISTS `Messages`;
+CREATE TABLE IF NOT EXISTS `Messages` (
+  `id` int(10) unsigned NOT NULL,
+  `idSender` int(11) NOT NULL,
+  `idRecipient` int(11) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `message` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы Anmark.ru.Messages: ~0 rows (приблизительно)
+DELETE FROM `Messages`;
+/*!40000 ALTER TABLE `Messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Messages` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Posts
 DROP TABLE IF EXISTS `Posts`;
@@ -63,9 +73,9 @@ CREATE TABLE IF NOT EXISTS `Posts` (
   KEY `post_author_id` (`author_id`),
   CONSTRAINT `post_author_id` FOREIGN KEY (`author_id`) REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `post_user_id` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Anmark.ru.Posts: ~4 rows (приблизительно)
+-- Дамп данных таблицы Anmark.ru.Posts: ~6 rows (приблизительно)
 DELETE FROM `Posts`;
 /*!40000 ALTER TABLE `Posts` DISABLE KEYS */;
 INSERT INTO `Posts` (`id`, `user_id`, `author_id`, `text`, `created`) VALUES
@@ -73,8 +83,9 @@ INSERT INTO `Posts` (`id`, `user_id`, `author_id`, `text`, `created`) VALUES
 	(2, 1, 1, 'Auto-<p>loading</p> Models\r\nIf you find that you need a particular model globally throughout your application, you can tell CodeIgniter to auto-load it during system initialization. This is done by opening the application/config/autoload.php file and adding the model to the autoload array.\r\n\r\nConnecting to your Database\r\nWhen a model is loaded it does NOT connect automatically to your database. The following options for connecting are available to you:\r\n\r\nYou can connect using the standard database methods described here, either from within your Controller class or your Model class.\r\nYou can tell the model loading method to auto-connect by passing TRUE (boolean) via the third parameter, and connectivity settings, as defined in your database config file will be used:', '0000-00-00 00:00:00'),
 	(3, 2, 2, 'Test? Yeah, just test', '0000-00-00 00:00:00'),
 	(4, 2, 2, 'de new test', '0000-00-00 00:00:00'),
-	(5, 2, 5, 'test by friend', '0000-00-00 00:00:00');
-  /*!40000 ALTER TABLE `Posts` ENABLE KEYS */;
+	(5, 2, 5, 'test by friend', '0000-00-00 00:00:00'),
+	(6, 5, 5, 'Best post for test', '0000-00-00 00:00:00');
+/*!40000 ALTER TABLE `Posts` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Anmark.ru.Post_Attachments
 DROP TABLE IF EXISTS `Post_Attachments`;
