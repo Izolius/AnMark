@@ -8,7 +8,9 @@ class Api extends ANM_default_page {
 			$this->load->database();
     }
 
-    public function addFriend($id){
+    public function addFriend($params){
+        $id=$params[0];
+        $redirectto=$params[1];
 		$query=$this->db->query(
 			'select friend_id from Users 
 			inner join Friends on Users.id=Friends.user_id
@@ -17,10 +19,13 @@ class Api extends ANM_default_page {
 		if ($canAdd)
 		{
 			$this->db->query('insert into Friends values(?,?)',array(currentUser()->id,$id));
-		}
+        }
+        header('Location: '.site_url($redirectto),true,301);
     }
     
-    public function RemoveFriend($id){
+    public function RemoveFriend($params){
+        $id=$params[0];
+        $redirectto=$params[1];
         $query=$this->db->query(
 			'select friend_id from Users 
 			inner join Friends on Users.id=Friends.user_id
@@ -30,6 +35,7 @@ class Api extends ANM_default_page {
         {
             $this->db->query('delete from Friends where user_id=? && friend_id=?',array(currentUser()->id,$id));
         }
+        header('Location: '.site_url($redirectto),true,301);
     }
 }
 ?>

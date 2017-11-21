@@ -12,9 +12,9 @@
     ?>
 </div>
 <?php if($canAdd):?>
-<div class="button add_friend_button">
+<div class="button add_friend_button" onclick = "window.location.href='../api/addFriend/<?php echo $user->id?>/friends'">
         <p>
-            <a href="" onclick = "Api/addFriend/"<?php $id?>= >Добавить в друзья</a>
+            Добавить в друзья
         </p>
 </div>
 <?php endif?>

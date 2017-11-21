@@ -16,9 +16,9 @@
         
         ?>
     </div>
-    <div class = "button exit_button">
+    <div class = "button exit_button" onclick = "window.location.href='api/removeFriend/<?php echo $id?>/friends'">
         <p> 
-            <a href="" onclick= Api::RemoveFriend($id)= >Убрать</a>
+            Убрать
         </p>
     </div>
 </div>
