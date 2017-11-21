@@ -16,9 +16,9 @@
         
         ?>
     </div>
-    <?php if($id != currentUser()->id):?>
-    <div class = "button exit_button">
-        <p><span><?php echo anchor('http://anmark.ru/index.php/api/RemoveFriend/'.$id, 'Убрать');?></span></p>
+    <div class = "button exit_button" onclick = "window.location.href='api/removeFriend/<?php echo $id?>/friends'">
+        <p> 
+            Убрать
+        </p>
     </div>
-    <?php endif?>
 </div>

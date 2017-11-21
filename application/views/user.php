@@ -12,12 +12,16 @@
     ?>
 </div>
 <?php if($canAdd):?>
-<div class="button add_friend_button">
-        <p><span><?php echo anchor('http://anmark.ru/index.php/api/addFriend/'.$user->id, 'Добавить в друзья'); ?></span></p>
+<div class="button add_friend_button" onclick = "window.location.href='../api/addFriend/<?php echo $user->id?>/friends'">
+        <p>
+            Добавить в друзья
+        </p>
 </div>
-    <?php else:?>
-<div class="button add_friend_button">
-        <p><span><?php echo anchor('http://anmark.ru/index.php/friends/'.$user->id, 'Посмотреть друзей'); ?></span></p>
+    <?php if($user->id!=currentUser()->id && !$canAdd)?>
+<div class="button add_friend_button" onclick = "window.location.href='../friends/<?php $user->id?>'">
+        <p>
+            Посмотреть друзей
+        </p>
 </div>
 <?php endif?>
 <div class="default user_name">
