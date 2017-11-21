@@ -9,7 +9,7 @@
 .news_feed{
     position: relative;
     left: 0px;
-    top: 250px;
+    top: 295px;
     right: 0px;
 }
 .add_friend_button{
@@ -19,5 +19,30 @@
     height: 40px;
     width: 200px;
     text-align: center;
-
+}
+.remove_friend_button{
+    position: absolute;
+    top: 205px;
+    left: 0px;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+}
+.post_input_textarea{
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    height: 30px;
+    width: 450px;
+    resize: none;
+}
+.post_input_button{
+    position: absolute;
+    top: 248px;
+    left: 460px;
+    height: 30px;
+    width: 50px;
+}
+.post_input_button_text{
+    margin-top:5px;
 }

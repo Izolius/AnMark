@@ -19,7 +19,11 @@ class User extends ANM_default_page {
 
     public function user($id)
     {
-        $header['css']=array("styles.css",'user.css', 'news_feed.css');
+		if ($id=='index')
+		{
+			$id=currentUser()->id;
+		}        
+		$header['css']=array("styles.css",'user.css', 'news_feed.css');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
@@ -40,6 +44,7 @@ class User extends ANM_default_page {
 			inner join Friends on Users.id=Friends.user_id
 			where user_id=? && friend_id=?',array(currentUser()->id, $id));
 		$innerdata['canAdd']=$id!=currentUser()->id && !(count($query->result())>0);
+		$innerdata['canRemove']=$id!=currentUser()->id && (count($query->result())>0);
 		$innerdata['feeddata']=$feeddata;
 		$view['view']='user';
 		$view['data']=$innerdata;

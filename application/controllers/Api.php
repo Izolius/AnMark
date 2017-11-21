@@ -5,7 +5,8 @@ class Api extends ANM_default_page {
     public function __construct()
     {
 			parent::__construct();
-			$this->load->database();
+            $this->load->database();
+            $this->load->helper('date');
     }
 
     public function addFriend($params){
@@ -35,6 +36,15 @@ class Api extends ANM_default_page {
         {
             $this->db->query('delete from Friends where user_id=? && friend_id=?',array(currentUser()->id,$id));
         }
+        header('Location: '.site_url($redirectto),true,301);
+    }
+
+    public function AddPost($params){
+        $id=$params[0];
+        $text=$params[1];
+        $redirectto=$params[2];
+        $this->db->query('insert into Posts(user_id, author_id, text, created) 
+                            values(?,?,?,?)',array($id,currentUser()->id,$text,mdate('%Y-%m-%d %h:%i:%s',now())));
         header('Location: '.site_url($redirectto),true,301);
     }
 }
