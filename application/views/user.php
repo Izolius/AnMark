@@ -48,6 +48,6 @@
 </script>
 
 <div class="default button post_input_button" onclick="addPost(<?php echo $user->id?>,'post_input_textarea_id','/user/<?php echo $user->id?>')">
-        <p class="post_input_button_text">W</p>
+        <p class="post_input_button_text">V</p>
 </div>
 <?php $this->view('controls/feed',$feeddata); ?>
