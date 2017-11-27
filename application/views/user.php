@@ -22,22 +22,19 @@
         </p>
 </div>
     <?php else:?>
-    <?php if($user->id != currentUser()->id):?>
-<div class="button add_friend_button" onclick = "window.location.href='../friends/<?php $user->id?>'">
+    <?php if($canRemove):?>
+    <div class="button remove_friend_button" onclick = "window.location.href='../api/removeFriend/<?php echo $user->id?>/friends'">
+            <p>
+            Удалить из друзей
+            </p>
+    </div>
+    <?php endif?>
+<?php endif?>
+<div class="button view_friend_button" onclick = "window.location.href='../friends/<?php echo $user->id?>'">
         <p>
             Посмотреть друзей
         </p>
 </div>
-<?php endif?>
-<?php endif?>
-
-<?php if($canRemove):?>
-<div class="button remove_friend_button" onclick = "window.location.href='../api/removeFriend/<?php echo $user->id?>/friends'">
-        <p>
-           Удалить из друзей
-        </p>
-</div>
-<?php endif?>
 <textarea id="post_input_textarea_id" class="post_input_textarea">
 </textarea>
 

@@ -15,12 +15,20 @@
 .add_friend_button{
     position: absolute;
     top: 205px;
-    left: 0px;
+    left: 205px;
     height: 40px;
     width: 200px;
     text-align: center;
 }
 .remove_friend_button{
+    position: absolute;
+    top: 205px;
+    left: 205px;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+}
+.view_friend_button{
     position: absolute;
     top: 205px;
     left: 0px;
@@ -35,6 +43,7 @@
     height: 30px;
     width: 450px;
     resize: none;
+    border-radius:8px;
 }
 .post_input_button{
     position: absolute;

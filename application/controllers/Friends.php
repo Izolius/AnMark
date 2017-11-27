@@ -31,6 +31,7 @@ class Friends extends ANM_default_page {
 		$innerdata['elements']=$query->result();
 		$innerdata['class']='friend_list';
 		$innerdata['view']='controls/friend';
+		$innerdata['ourUser']=$user_id==currentUser()->id && (count($query->result())>0);
 		$view['view']='controls/feed';
 		$view['data']=$innerdata;
 		$this->load->view('controls/page_placer', $view);

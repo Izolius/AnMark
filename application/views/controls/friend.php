@@ -16,9 +16,11 @@
         
         ?>
     </div>
+    <?php if($ourUser):?>
     <div class = "button exit_button" onclick = "window.location.href='api/removeFriend/<?php echo $id?>/friends'">
         <p> 
             Убрать
         </p>
     </div>
+    <?php endif?>
 </div>

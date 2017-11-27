@@ -1,5 +1,5 @@
 .default {
-  font-family:'myFont', 'Segoe Script';
+  font-family:'Impact', 'fantasy'; 
   font-weight:400;
   font-style:normal;
   font-size:15px;
@@ -22,7 +22,7 @@
 }
 .button{
   border-radius: 8px;
-  font-family:'myFont', 'Segoe Script';
+  font-family:'Helvetica', 'sans-serif';
   font-weight:700;
   font-style:normal;
   font-size: 10px;
@@ -36,7 +36,7 @@
   margin: 4px 2px;
 }
 .button:hover{
-  font-family:'myFont Полужирный', 'Segoe Script';
+  font-family:'Helvetica Полужирный', 'sans-serif';
   box-shadow: 10px 12px 16px 0 rgba(0,0,0,0.24), 10px 17px 50px 0 rgba(0,0,0,0.19);
 }
 .bordered{
@@ -78,7 +78,7 @@
   height: inherit;
 }
 a{
-  font-family:'myFont', 'Segoe Script';
+  font-family:'Helvetica', 'sans-serif';
   font-weight:700;
   font-style:normal;
   color: black;
@@ -87,7 +87,7 @@ a{
   text-align:center;
 }
 p{
-  font-family:'myFont', 'Segoe Script';
+  font-family:'Helvetica', 'sans-serif';
   font-weight:700;
   font-style:normal;
   color: black;

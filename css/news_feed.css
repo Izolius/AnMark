@@ -16,7 +16,7 @@
     top:-20px;
 }
 .post_text_rel{
-    font-family:'myFont', 'Segoe Script';
+    font-family:'Helvetica', 'sans-serif';
     position: relative;
     left:10px;
     /* right:30px; */
@@ -36,7 +36,7 @@
     /*top:10px;*/
 }
 .post_text{
-    font-family:'myFont', 'Segoe Script';
+    font-family:'Helvetica', 'sans-serif';
     position: absolute;
     top:70px;
     left:10px;
