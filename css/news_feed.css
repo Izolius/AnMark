@@ -2,6 +2,7 @@
     top: auto;
     position: relative;
     height: auto;
+    background-color: rgb(235, 235, 235);
 }
 .post_author_name_rel{
     position: relative;
