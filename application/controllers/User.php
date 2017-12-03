@@ -24,6 +24,7 @@ class User extends ANM_default_page {
 			$id=currentUser()->id;
 		}        
 		$header['css']=array("styles.css",'user.css', 'news_feed.css');
+		$header['script']=array('user.js','api.js');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);

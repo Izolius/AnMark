@@ -15,25 +15,29 @@
     <p><span><?php echo $user->first_name.' '.$user->last_name?></span></p>
 </div>
 
-<?php if($canAdd):?>
-<div class="button add_friend_button" onclick = "window.location.href='../api/addFriend/<?php echo $user->id?>/friends'">
+<div id="add_friend_button" class="button add_friend_button" onclick = "addFriend(<?php echo $user->id?>)"
+    <?php if(!$canAdd):?>
+    style="visibility:hidden"
+    <?php endif?> 
+>
         <p>
             Добавить в друзья
         </p>
 </div>
-    <?php else:?>
-    <?php if($canRemove):?>
-    <div class="button remove_friend_button" onclick = "window.location.href='../api/removeFriend/<?php echo $user->id?>/friends'">
-            <p>
-            Удалить из друзей
-            </p>
-    </div>
-    <?php endif?>
-<?php endif?>
+    
+<div id="remove_friend_button" class="button remove_friend_button" onclick = "removeFriend(<?php echo $user->id?>)"
+    <?php if(!$canRemove):?>
+    style="visibility:hidden"
+    <?php endif?>  
+>
+    <p>
+    Удалить из друзей
+    </p>
+</div>
 <div class="button view_friend_button" onclick = "window.location.href='../friends/<?php echo $user->id?>'">
-        <p>
-            Посмотреть друзей
-        </p>
+    <p><?php 
+        echo anchor(site_url('friends/'.$user->id),'Посмотреть друзей');
+    ?></p>
 </div>
 <textarea id="post_input_textarea_id" class="post_input_textarea">
 </textarea>
