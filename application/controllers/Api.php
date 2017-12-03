@@ -44,8 +44,42 @@ class Api extends ANM_default_page {
         $text=$params[1];
         $redirectto=$params[2];
         $this->db->query('insert into Posts(user_id, author_id, text, created) 
-                            values(?,?,?,?)',array($id,currentUser()->id,$text,mdate('%Y-%m-%d %h:%i:%s',now())));
+                            values(?,?,?,?)',array($id,currentUser()->id,urldecode($text),mdate('%Y-%m-%d %h:%i:%s',now())));
         header('Location: '.site_url($redirectto),true,301);
+    }
+
+    public function sendMessage($params){
+        $id=$params[0];
+        $text=$params[1];
+        $this->db->query('insert into Messages(idSender, idRecipient, text, created) values(?,?,?,?)',
+        array(currentUser()->id, $id, urldecode($text), mdate('%Y-%m-%d %h:%i:%s',now())));
+    }
+
+    public function LongPollingGetMessage($params){
+        $id=$params[0];
+        $last_id=$params[1];
+        $limit = 10;
+        $time = time();
+        set_time_limit($limit+5);
+        $cur_id=$last_id;
+        while (time()-$time<$limit) {
+            // checking if something new was added to my test table
+            $query=$this->db->query('
+            select users.id as userid, first_name, last_name, photo_50,text, created, messages.id as msgid from messages 
+            inner join Users on users.id=idSender
+            where idSender=? && idRecipient=? || idRecipient=? && idSender=? 
+            order by created desc'
+            ,array(currentUser()->id,$id,currentUser()->id,$id));
+            $cur_id=$query->row()->msgid;
+            if ($last_id!=$cur_id) {
+                echo $this->load->view('controls/dialog',$query->row(), TRUE);
+                // выбрасываем все данные и выходим, чтобы клиент смог их обработать
+                flush();
+                exit;
+            }
+            // если данных нет - ждём 5 секунд
+            sleep(5);
+        }
     }
 }
 ?>

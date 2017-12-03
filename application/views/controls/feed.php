@@ -1,4 +1,4 @@
-<div class="<?php echo $class?>">
+<div <?php if(isset($id)) echo "id=".'"'.$id.'"' ?>  class="<?php echo $class?>">
 <?php 
 if (isset($elements)):
     foreach ($elements as $element){

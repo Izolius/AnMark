@@ -11,3 +11,7 @@ function removeFriend(id){
         document.getElementById('remove_friend_button').style.visibility='hidden';
     });
 }
+
+function addPost(id,element,redirect){
+    window.location.href='window.location.href=../api/addPost/'+id+'/'+document.getElementById(element).value+'/'+redirect;
+}

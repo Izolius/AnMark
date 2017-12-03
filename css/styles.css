@@ -96,6 +96,10 @@ p{
   font-size:15px;
   vertical-align: middle;
 }
+.exactp{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
 form{
   margin: auto;
 }

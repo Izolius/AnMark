@@ -5,7 +5,9 @@
 }
 .friend_name{
     position: absolute;
+    top: 10px;
     left: 70px;
+    height: 10px;
     text-align:center;
 }
 .friend_photo{
