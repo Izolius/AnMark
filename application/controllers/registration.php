@@ -18,7 +18,8 @@ class Registration extends CI_Controller {
                 $header['css']=array("styles.css","user.css");
                 $title['logo']="logo_100_60";
                 $this->load->view('header', $header);
-                $this->load->view('registration',$title);
+                
+                $this->load->view('registration');
                 $this->load->view('footer');
             }
             else

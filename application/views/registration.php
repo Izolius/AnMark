@@ -2,7 +2,10 @@
 
 
 <?php echo form_open('registration'); ?>
+
 <div class="login_form " >
+
+
             <?php echo form_error('first_name'); ?>
         <div class="bordered login_form_text " >
             <div class="field_name">
@@ -42,14 +45,13 @@
              </div>
             <p><span><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="94" /></span></p>
         </div>
-
-        <div class="button toRegistrtion">
-        <p><span><div><input type="submit" value="Зарегистрировать" /></div></span></p>
-        </div>
         <div class="button toLogin">
-      <p><?php 
-        echo anchor(site_url('welcome'),'Отмена');
-      ?></p>
-    </div>
+            <p><?php 
+                echo anchor(site_url('welcome'),'Отмена');
+            ?></p>
+        </div>
+        <div class="button toRegistrtion">
+        <input type="submit" value="Зарегистрировать" />
+        </div>
+        
 </div>
-</form>
