@@ -19,7 +19,7 @@
 </div>
 
 <div class="button toLogin" >
-<input type="submit" value="Войти" /></span>
+<input type="submit" value="Войти" />
 </div>
 
 <div class="button toRegistrtion">

@@ -45,13 +45,18 @@
              </div>
             <p><span><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="94" /></span></p>
         </div>
+        
+        <div class="button toRegistrtion">
+        <input type="submit" value="Регистрация!" />
+        </div>
+
         <div class="button toLogin">
             <p><?php 
                 echo anchor(site_url('welcome'),'Отмена');
             ?></p>
         </div>
-        <div class="button toRegistrtion">
-        <input type="submit" value="Зарегистрировать" />
-        </div>
+
+      
+
         
 </div>
