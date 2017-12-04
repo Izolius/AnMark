@@ -2,6 +2,7 @@
 }
 .friend{
     height: 70px;
+    background-color: rgb(235,235,235);
 }
 .friend_name{
     position: absolute;

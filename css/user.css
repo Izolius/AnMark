@@ -15,25 +15,36 @@
 .add_friend_button{
     position: absolute;
     top: 205px;
-    left: 205px;
+    left: 175px;
     height: 40px;
-    width: 200px;
+    width: 165px;
     text-align: center;
 }
 .remove_friend_button{
     position: absolute;
     top: 205px;
-    left: 205px;
+    left: 175px;
     height: 40px;
-    width: 200px;
+    width: 165px;
     text-align: center;
+}
+.send_message_button{
+    position: absolute;
+    top: 205px;
+    left: 345px;
+    height: 40px;
+    width: 165px;
+    text-align: center;
+}
+.send_to_myself{
+    left: 175px;
 }
 .view_friend_button{
     position: absolute;
     top: 205px;
     left: 0px;
     height: 40px;
-    width: 200px;
+    width: 170px;
     text-align: center;
 }
 .post_input_textarea{

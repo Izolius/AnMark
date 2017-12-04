@@ -39,10 +39,15 @@
         echo anchor(site_url('friends/'.$user->id),'Посмотреть друзей');
     ?></p>
 </div>
+<div class="button send_message_button" onclick = "window.location.href='../messages/<?php echo $user->id?>'">
+    <p><?php 
+        echo anchor(site_url('messages/'.$user->id),'Написать');
+    ?></p>
+</div>
 <textarea id="post_input_textarea_id" class="post_input_textarea">
 </textarea>
 
 <div class="default button post_input_button" onclick="addPost(<?php echo $user->id?>,'post_input_textarea_id','/user/<?php echo $user->id?>')">
-        <p class="post_input_button_text">V</p>
+        <p class="post_input_button_text">Post</p>
 </div>
 <?php $this->view('controls/feed',$feeddata); ?>
