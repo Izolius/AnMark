@@ -1,10 +1,11 @@
 <?php
 include ("ANM_default_page.php");
-class Registration extends ANM_default_page {
+class Registration extends CI_Controller {
     public function __construct()
     {
             parent::__construct();
-			$this->load->helper('date');
+            $this->load->helper(array('url','html','user','date'));
+            $this->load->library('session');
     }
     public function index()
     {
