@@ -15,9 +15,10 @@ class Registration extends CI_Controller {
 
             if ($this->form_validation->run('signup') == FALSE)
             {
-                $header['css']=array("styles.css");
+                $header['css']=array("styles.css","user.css");
+                $title['logo']="logo_100_60";
                 $this->load->view('header', $header);
-                $this->load->view('registration');
+                $this->load->view('registration',$title);
                 $this->load->view('footer');
             }
             else

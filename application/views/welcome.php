@@ -1,19 +1,34 @@
 
 <?php echo form_open('welcome'); ?>
+<div>
 
-<h5>Почтовый адрес</h5>
+<div class="bordered login_form_text " >
+<div class="field_name">
+            <p><span><?php echo ('Адрес электронной почты');?></span></p>
+            </div>
 <?php echo form_error('email'); ?>
-<input type="text" name="email" value="<?php echo set_value('email'); ?>" size="50" />
+<p><span><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="94" /></span></p>
+</div>
 
-<h5>Пароль</h5>
+<div class="bordered login_form_text " >
+<div class="field_name">
+            <p><span><?php echo ('Пароль');?></span></p>
+            </div>
 <?php echo form_error('password'); ?>
-<input type="password" name="password" value="<?php echo set_value('password'); ?>" size="50" />
+<p><span><input type="password" name="password" value="<?php echo set_value('password'); ?>" size="94" /></span></p>
+</div>
 
-<div><input type="submit" value="Войти" /></div>
+<div class="button toLogin" >
+    <p>
+       <input type="submit" value="Войти" />
+     </p>
+</div>
 
-<?php
-$js = 'onClick=changeLocation("'.site_url('registration').'")';
-echo form_button('mybutton', 'Зарегистрироваться', $js);
-?>
+<div class="button toRegistrtion">
+      <p><?php 
+        echo anchor(site_url('registration'),'Регистрация');
+      ?></p>
+    </div>
 
+    </div>
 </form>

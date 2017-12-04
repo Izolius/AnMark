@@ -1,5 +1,17 @@
 .registration_button{
-    font-family:'Impact', 'fantasy'; 
     position: relative;
     height: auto;
+    border-radius: 8px;
+    font-family:'Helvetica', 'sans-serif';
+    font-weight:700;
+    font-style:normal;
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color:rgba(215,215,215,1);
+    text-shadow: black;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    display: inline-block;
+    margin: 4px 2px;
 }

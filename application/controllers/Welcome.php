@@ -13,10 +13,11 @@ class Welcome extends CI_Controller {
 	{
 		if ($this->form_validation->run('signin') == FALSE)
 		{
-			$header['css']=array("styles.css", "welcome.css");
+			$header['css']=array("styles.css", "welcome.css","user.css");
+			$title['logo']="logo_100_60";
 			$header['script']=array("welcome.js");
 			$this->load->view('header', $header);
-			$this->load->view('welcome');
+			$this->load->view('welcome',$title);
 			$this->load->view('footer');
 		}
 		else

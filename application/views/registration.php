@@ -1,26 +1,55 @@
 
+
+
 <?php echo form_open('registration'); ?>
+<div class="login_form " >
+        <div class="bordered login_form_text " >
+            <div class="field_name">
+            <p><span><?php echo ('Имя');?></span></p>
+            </div>
+            <?php echo form_error('first_name'); ?>
+            <p><span><input type="text" name="first_name" value="<?php echo set_value('first_name'); ?>" size="94" /></span></p>
+        </div>
 
-<h5>Имя</h5>
-<?php echo form_error('first_name'); ?>
-<input type="text" name="first_name" value="<?php echo set_value('first_name'); ?>" size="50" />
+        <div class="bordered login_form_text " >
+            <div class="field_name">
+            <p><span><?php echo ('Фамилия');?></span></p>
+            </div>
+            <?php echo form_error('last_name'); ?>
+            <p><span><input type="text" name="last_name" value="<?php echo set_value('last_name'); ?>" size="94" /></span></p>
+        </div>
 
-<h5>Фамилия</h5>
-<?php echo form_error('last_name'); ?>
-<input type="text" name="last_name" value="<?php echo set_value('last_name'); ?>" size="50" />
+        <div class="bordered login_form_text " >
+            <div class="field_name">
+            <p><span><?php echo ('Пароль');?></span></p>
+            </div>
+            <?php echo form_error('password'); ?>
+            <p><span><input type="password" name="password" value="<?php echo set_value('password'); ?>" size="94" /></span></p>
+        </div>
 
-<h5>Пароль</h5>
-<?php echo form_error('password'); ?>
-<input type="password" name="password" value="<?php echo set_value('password'); ?>" size="50" />
+        <div class="bordered login_form_text " >
+            <div class="field_name">
+            <p><span><?php echo ('Повторите пароль');?></span></p>
+            </div>
+            <?php echo form_error('passconf'); ?>
+            <p><span><input type="password" name="passconf" value="<?php echo set_value('passconf'); ?>" size="94" /></span></p>
+        </div>
 
-<h5>Пароль ещё раз</h5>
-<?php echo form_error('passconf'); ?>
-<input type="password" name="passconf" value="<?php echo set_value('passconf'); ?>" size="50" />
+        <div class="bordered login_form_text " >
+            <div class="field_name">
+            <p><span><?php echo ('Адрес электронной почты');?></span></p>
+             </div>
+            <?php echo form_error('email'); ?>
+            <p><span><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="94" /></span></p>
+        </div>
 
-<h5>Почтовый адрес</h5>
-<?php echo form_error('email'); ?>
-<input type="text" name="email" value="<?php echo set_value('email'); ?>" size="50" />
-
-<div><input type="submit" value="Зарегистрировать" /></div>
-
+        <div class="button toRegistrtion">
+        <p><span><div><input type="submit" value="Зарегистрировать" /></div></span></p>
+        </div>
+        <div class="button toLogin">
+      <p><?php 
+        echo anchor(site_url('welcome'),'Отмена');
+      ?></p>
+    </div>
+</div>
 </form>
