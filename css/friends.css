@@ -16,3 +16,12 @@
     left: 10px;
     top: 10px;
 }
+.dialog_friend{
+    height: 70px;
+    background-color: rgb(235,235,235);
+}
+.dialog_friend:hover{
+    height: 70px;
+    background-color: rgb(235,235,235);
+    box-shadow: 10px 12px 16px 0 rgba(0,0,0,0.24), 10px 17px 50px 0 rgba(0,0,0,0.19);
+}
