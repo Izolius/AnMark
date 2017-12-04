@@ -1,5 +1,6 @@
 function sendMessage(id){
     callApi('SendMessage',[id, document.getElementById('message_input_textarea_id').value]);
+    document.getElementById('message_input_textarea_id').value='';
 }
 
 function onNewMessage(msgHTML){
@@ -13,9 +14,9 @@ function onNewMessage(msgHTML){
 }
 
 
-function LongPollingGetMessage(params, onComplete ){
+function ShortPollingGetMessage(params, onComplete ){
     var xhr=new XMLHttpRequest();
-    url='http://anmark.ru/index.php/api/LongPollingGetMessage';
+    url='http://anmark.ru/index.php/api/ShortPollingGetMessage';
     params.forEach(function(item, i, params) {
         url=url.concat('/').concat(item);
     });
@@ -27,14 +28,14 @@ function LongPollingGetMessage(params, onComplete ){
                 // сервер может закрыть соединение без ответа при перезагрузке
                 var new_id=onComplete(this.responseText);
               }
-              setTimeout(LongPollingGetMessage, 5000, [params[0],new_id], onComplete); // попробовать ещё раз через 1 сек
+              setTimeout(ShortPollingGetMessage, 2000, [params[0],new_id], onComplete); // попробовать ещё раз через 1 сек
               return;
         }
         if (this.status != 502) {
             // 502 - прокси ждал слишком долго, надо пересоединиться, это не ошибка
-            showMessage(this.statusText); // показать ошибку
+            //alert(this.statusText); // показать ошибку
           }
-        setTimeout(LongPollingGetMessage, 5000, params, onComplete); // попробовать ещё раз через 1 сек
+        setTimeout(ShortPollingGetMessage, 2000, params, onComplete); // попробовать ещё раз через 1 сек
     }
     xhr.open('GET',url,true);
     xhr.send();

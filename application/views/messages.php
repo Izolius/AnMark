@@ -8,5 +8,5 @@
 
 <?php $this->view('controls/feed',$feeddata); ?>
 <script>
-        LongPollingGetMessage([<?php echo $user->id?>,document.getElementById('messages_id').children[0].id],onNewMessage);
+        ShortPollingGetMessage([<?php echo $user->id?>,document.getElementById('messages_id').children[0].id],onNewMessage);
 </script>
