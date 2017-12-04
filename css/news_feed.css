@@ -45,3 +45,8 @@
     resize: none;
     word-break: break-all;
 }
+.post_data{
+    font-family:'Helvetica Курсив', 'sans-serif';
+    position: relative;
+    left: auto;
+}

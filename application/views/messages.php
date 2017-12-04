@@ -3,7 +3,7 @@
 </textarea>
 
 <div class="default button write_message_button" onclick="sendMessage(<?php echo $user->id?>)" >
-        <p class="write_message_button_text">V</p>
+        <p class="write_message_button_text">Send</p>
 </div>
 
 <?php $this->view('controls/feed',$feeddata); ?>
