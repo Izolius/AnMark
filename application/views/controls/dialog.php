@@ -1,4 +1,4 @@
-<div id="<?php echo $msgid;?>" class="bordered feed_element dialog">
+<div id="<?php echo $msgid;?>" class="bordered feed_element dialog" onclick="onMessageClick()">
     <div class="friend_name">
         <p class="exactp"><span><?php echo anchor('user/'.$userid,$first_name.' '.$last_name);?></span></p>
     </div>

@@ -3,6 +3,10 @@ function sendMessage(id){
     document.getElementById('message_input_textarea_id').value='';
 }
 
+function onMessageClick(){
+    console.log(dialogDOM=document.getElementById("messages_id").children.length);
+}
+
 function onNewMessage(msgHTML){
     var parser= new DOMParser();
     var msgDOM=parser.parseFromString(msgHTML,'text/html').body.children[0];
