@@ -172,6 +172,10 @@ form{
   height: 10px;
   text-align:left;
 }
+
+.button_text{
+  margin-top:12px;
+}
 @font-face {
   font-family: myFont;
   src:url('../rsc/fonts/segoesc.ttf') format('TrueType'), 

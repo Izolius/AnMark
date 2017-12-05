@@ -20,7 +20,7 @@
     style="visibility:hidden"
     <?php endif?> 
 >
-        <p>
+        <p class="button_text">
             Добавить в друзья
         </p>
 </div>
@@ -30,18 +30,18 @@
     style="visibility:hidden"
     <?php endif?>  
 >
-    <p>
+    <p class="button_text">
     Удалить из друзей
     </p>
 </div>
 <div class="button view_friend_button" onclick = "window.location.href='../friends/<?php echo $user->id?>'">
-    <p><?php 
+    <p class="button_text"><?php 
         echo anchor(site_url('friends/'.$user->id),'Посмотреть друзей');
     ?></p>
 </div>
 <div class="button send_message_button" onclick = "window.location.href='../messages/<?php echo $user->id?>'">
-    <p><?php 
-        echo anchor(site_url('messages/'.$user->id),'Написать');
+    <p  class="button_text"><?php 
+        echo anchor(site_url('messages/'.$user->id), 'Написать');
     ?></p>
 </div>
 <textarea id="post_input_textarea_id" class="bordered post_input_textarea">

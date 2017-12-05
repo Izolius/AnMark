@@ -5,7 +5,7 @@
     </div>
     <!-- Exit (Rectangle) -->
     <div class="button exit_button">
-      <p><?php 
+      <p class="button_text"><?php 
         echo anchor(site_url('welcome/logout'),'Выход');
       ?></p>
     </div>

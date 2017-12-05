@@ -10,5 +10,5 @@ if (isset($site))
 if (isset($class))
     $_class=$class;
 ?>
-        <p><?php echo anchor(site_url($_site), $_text, 'class="'.$_class.'"');?></p>
+        <p  class="button_text"><?php echo anchor(site_url($_site), $_text, 'class="'.$_class.'"');?></p>
     </div>

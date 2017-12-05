@@ -58,6 +58,7 @@
 }
 .post_input_button{
     position: absolute;
+    text-align: center;
     top: 250px;
     left: 465px;
     height: 34px;
@@ -66,5 +67,5 @@
 }
 
 .post_input_button_text{
-    margin-top:5px;
+    margin-top:9px;
 }

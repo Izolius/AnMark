@@ -24,12 +24,12 @@
 }
 .write_message_button{
     position: absolute;
+    text-align: center;
     left: 465px;
     height: 34px;
     width: 40px;
     margin: 0px;
-
 }
 .write_message_button_text{
-    margin-top:5px;
+    margin-top:9px;
 }
