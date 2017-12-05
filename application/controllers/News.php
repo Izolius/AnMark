@@ -10,6 +10,7 @@ class News extends ANM_default_page {
 	public function index()
 	{
 		$header['css']=array("styles.css",'news_feed.css');
+		$header['script']=array('script.js');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
@@ -28,6 +29,7 @@ class News extends ANM_default_page {
         //$query=$this->db->query('select * from Users where id=?',$id);
 		$view['view']='controls/feed';
 		$view['data']=$innerdata;
+		$view['left_index']=3;
 
 		$this->load->view('controls/page_placer', $view);
 

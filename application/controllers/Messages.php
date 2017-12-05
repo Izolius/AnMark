@@ -26,7 +26,7 @@ class Messages extends ANM_default_page {
 			return;
 		}
 		$header['css']=array("styles.css",'messages.css','friends.css');
-		$header['script']=array('messages.js','api.js');
+		$header['script']=array('messages.js','api.js','script.js');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
@@ -48,6 +48,7 @@ class Messages extends ANM_default_page {
 		$innerdata['feeddata']=$feeddata;
 		$view['view']='messages';
 		$view['data']=$innerdata;
+		$view['left_index']=2;
 		$this->load->view('controls/page_placer', $view);
 
 

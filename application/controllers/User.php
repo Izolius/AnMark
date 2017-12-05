@@ -24,7 +24,7 @@ class User extends ANM_default_page {
 			$id=currentUser()->id;
 		}        
 		$header['css']=array("styles.css",'user.css', 'news_feed.css');
-		$header['script']=array('user.js','api.js');
+		$header['script']=array('user.js','api.js','script.js');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
@@ -49,6 +49,10 @@ class User extends ANM_default_page {
 		$innerdata['feeddata']=$feeddata;
 		$view['view']='user';
 		$view['data']=$innerdata;
+		if ($id===currentUser()->id)
+			$view['left_index']=0;
+		else
+			$view['left_index']=-1;
 
 		$this->load->view('controls/page_placer', $view);
 		$this->load->view('footer');

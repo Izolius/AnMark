@@ -23,6 +23,7 @@ class Message extends ANM_default_page {
 		if ($user_id=='index')
 			$user_id=currentUser()->id;
 		$header['css']=array("styles.css", "friends.css");
+		$header['script']=array('messages.js','api.js','script.js');
 		$title['logo']="logo_100_60";
 		$this->load->view('header', $header);
 		$this->load->view('controls/Title',$title);
@@ -34,6 +35,7 @@ class Message extends ANM_default_page {
 		$innerdata['ourUser']=$user_id==currentUser()->id && (count($query->result())>0);
 		$view['view']='controls/feed';
 		$view['data']=$innerdata;
+		$view['left_index']=2;
 		$this->load->view('controls/page_placer', $view);
 		$this->load->view('footer');
 	}
