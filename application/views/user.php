@@ -44,7 +44,7 @@
         echo anchor(site_url('messages/'.$user->id),'Написать');
     ?></p>
 </div>
-<textarea id="post_input_textarea_id" class="post_input_textarea">
+<textarea id="post_input_textarea_id" class="bordered post_input_textarea">
 </textarea>
 
 <div class="default button post_input_button" onclick="addPost(<?php echo $user->id?>,'post_input_textarea_id','/user/<?php echo $user->id?>')">

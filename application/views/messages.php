@@ -1,5 +1,5 @@
 
-<textarea id="message_input_textarea_id" class="message_input_textarea">
+<textarea id="message_input_textarea_id" class="bordered message_input_textarea">
 </textarea>
 
 <div class="default button write_message_button" onclick="sendMessage(<?php echo $user->id?>)" >
