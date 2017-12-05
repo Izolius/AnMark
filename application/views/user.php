@@ -47,7 +47,7 @@
 <textarea id="post_input_textarea_id" class="bordered post_input_textarea">
 </textarea>
 
-<div class="default button post_input_button" onclick="addPost(<?php echo $user->id?>,'post_input_textarea_id','/user/<?php echo $user->id?>')">
+<div class="bordered_btn button post_input_button" onclick="addPost(<?php echo $user->id?>,'post_input_textarea_id','/user/<?php echo $user->id?>')">
         <p class="post_input_button_text">Post</p>
 </div>
 <?php $this->view('controls/feed',$feeddata); ?>

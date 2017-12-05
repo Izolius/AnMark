@@ -2,7 +2,7 @@
 <textarea id="message_input_textarea_id" class="bordered message_input_textarea">
 </textarea>
 
-<div class="default button write_message_button" onclick="sendMessage(<?php echo $user->id?>)" >
+<div class="bordered_btn button write_message_button" onclick="sendMessage(<?php echo $user->id?>)" >
         <p class="write_message_button_text">Send</p>
 </div>
 

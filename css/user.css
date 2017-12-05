@@ -58,11 +58,12 @@
 }
 .post_input_button{
     position: absolute;
-    top: 248px;
+    top: 246px;
     left: 460px;
-    height: 30px;
+    height: 35px;
     width: 50px;
 }
+
 .post_input_button_text{
     margin-top:5px;
 }

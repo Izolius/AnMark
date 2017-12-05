@@ -24,9 +24,11 @@
 }
 .write_message_button{
     position: absolute;
-    left: 460px;
-    height: 30px;
-    width: 50px;
+    left: 465px;
+    height: 35px;
+    width: 40px;
+    margin: 0px;
+
 }
 .write_message_button_text{
     margin-top:5px;

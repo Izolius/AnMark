@@ -51,6 +51,12 @@
   border-color: rgb(195, 195, 195);
   border-radius: 8px;
 }
+.bordered_btn{
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(215, 215, 215);
+  border-radius: 8px;
+}
 .logo_100_60{
   position: relative;
   left:20px;
@@ -133,6 +139,7 @@ input[type=submit] {
   padding:16px 15px;
   border:0 none;
   cursor:pointer;
+  background-color: rgb(215,215,215);
   -webkit-border-radius: 5px;
   border-radius: 5px; 
 }
